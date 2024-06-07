@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientReport_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="56568140-9766-4456-8a37-079841413e51">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="PatientDataSet" uuid="0b55a4a5-7e75-495e-a614-a579a1a83ea5">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="id" class="java.lang.String"/>
+		<field name="name" class="java.lang.String"/>
+		<field name="nic" class="java.lang.String"/>
+		<field name="dateOfBirth" class="java.util.Date"/>
+		<field name="email" class="java.lang.String"/>
+		<field name="age" class="java.lang.String"/>
+		<field name="gender" class="java.lang.String"/>
+		<field name="address" class="java.lang.String"/>
+		<field name="contactNo" class="java.lang.String"/>
+		<field name="emergencyContactNo" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="PatientParameter" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="nic" class="java.lang.String"/>
+	<parameter name="dob" class="java.util.Date"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.String"/>
+	<parameter name="gender" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="contactNo" class="java.lang.String"/>
+	<parameter name="emergencyContactNo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="nic" class="java.lang.String"/>
+	<field name="dateOfBirth" class="java.util.Date"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="contactNo" class="java.lang.String"/>
+	<field name="emergencyContactNo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="595" height="84" uuid="604c7fc9-accd-4488-b276-ff6109052d44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patinet Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="395" splitType="Stretch">
+			<staticText>
+				<reportElement x="55" y="38" width="100" height="30" uuid="19cb8f6c-16ad-489d-98f0-7401911ec8b4"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="70" width="100" height="30" uuid="be090937-1db3-47ac-983b-cc509addd9e2"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="100" width="100" height="30" uuid="d4fc06b7-a2f6-4f9d-9b1e-17c39aed769a"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Nic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="130" width="100" height="30" uuid="bd884208-032a-4655-a3ba-38f54dff3ed4"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Date Of Birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="160" width="100" height="30" uuid="30a725a3-a8bb-47c1-9b16-baafe825ab70"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="190" width="100" height="30" uuid="62da0f33-bc4e-4e69-ae46-0b3bdd52190d"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="220" width="100" height="30" uuid="97a901b0-3818-43ed-adfa-017e2e0d3638"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="250" width="100" height="30" uuid="c641b4ff-f3dc-40b9-a0ea-88a973de9f54"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="280" width="145" height="30" uuid="9ef97985-bf56-4b1e-927b-07cfe87213b3"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Contact No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="310" width="205" height="30" uuid="6163b460-13a9-4f7a-b85f-9bd15dfe0211"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Emergency Contact No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="38" width="100" height="30" uuid="f4dbe04b-3e2b-4889-85d5-57fcdc403c74"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="70" width="100" height="30" uuid="c58d60f3-4c7c-4ad4-8339-233f96d57239"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="100" width="100" height="30" uuid="cdd5d83d-e465-4a44-8922-999ec8cd3f1f"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="130" width="100" height="30" uuid="dc1e2187-5863-4c2a-88c5-218761534682"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="160" width="100" height="30" uuid="0d475cf4-36ae-4279-b907-78155204ca17"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="190" width="100" height="30" uuid="b83625b3-e789-4917-aeb8-8c6bf247c6af"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="220" width="100" height="30" uuid="dfd93bce-7d1e-4192-ba3d-ff53149ea478"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="250" width="100" height="30" uuid="ec808376-a38c-4965-8b9f-ff0fecdf504c"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="280" width="210" height="30" uuid="c6be0d2e-6a7a-4dab-93c0-7c55dae41900"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{contactNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="310" width="265" height="30" uuid="15d9f3f3-dd52-44d1-8ab3-44defad90a5b"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emergencyContactNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

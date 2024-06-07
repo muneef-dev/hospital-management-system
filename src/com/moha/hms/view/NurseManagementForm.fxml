@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="context" prefHeight="420.0" prefWidth="870.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moha.hms.controller.NurseManagementFormController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Nurse Management">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Separator prefHeight="8.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" top="10.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <HBox prefHeight="190.0" prefWidth="325.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="managementAllBtn" fx:id="btnViewAndManageAll" alignment="CENTER" graphicTextGap="50.0" mnemonicParsing="false" onAction="#btnViewAndManageAllOnAction" prefHeight="150.0" prefWidth="1000.0" style="-fx-background-radius: 16;" text="View &amp; Manage All ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-view-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="managementAllBtn" fx:id="btnAddNew" alignment="CENTER" graphicTextGap="50.0" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="150.0" prefWidth="1000.0" style="-fx-background-radius: 16;" text="Add new ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/5978290_corona_coronavirus_doctor_healthcare_mask_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

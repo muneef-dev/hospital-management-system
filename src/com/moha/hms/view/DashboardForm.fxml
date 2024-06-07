@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="mainContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moha.hms.controller.DashboardFormController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="720.0" prefWidth="220.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <Label text="HMS">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="main-btns" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="30.0" prefWidth="163.0" styleClass="dashboard-btn" text="Dashboard" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView id="main-btns" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/4171945_admin_dashboard_theme_administrator_compact_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnPatient" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnPatientOnAction" prefHeight="30.0" prefWidth="163.0" text="Patient" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/face-mask-man-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnAppointment" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnAppointmentOnAction" prefHeight="30.0" prefWidth="163.0" text="Appointment" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-calendar-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnDiagnosis" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnDiagnosisOnAction" prefHeight="30.0" prefWidth="163.0" text="Diagnosis" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-diagnosis-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnAdmission" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnAdmissionOnAction" prefHeight="30.0" prefWidth="163.0" text="Admission" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-admission-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnMedication" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnMedicationOnAction" prefHeight="30.0" prefWidth="163.0" text="Medication" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-hand-with-a-pill-100.png" />
+                     </image></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnBill" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnBillOnAction" prefHeight="30.0" prefWidth="163.0" text="Bill" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/bill.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnInventory" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnInventoryOnAction" prefHeight="30.0" prefWidth="163.0" text="Inventory" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/add-inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnDoctor" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnDoctorOnAction" prefHeight="30.0" prefWidth="163.0" text="Doctor" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/doctor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnNurse" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnNurseOnAction" prefHeight="30.0" prefWidth="163.0" text="Nurse" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/nurse.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnDepartment" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnDepartmentOnAction" prefHeight="30.0" prefWidth="163.0" text="Department" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-department-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnRoom" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnRoomOnAction" prefHeight="30.0" prefWidth="163.0" text="Room" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-room-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnReports" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="30.0" prefWidth="163.0" text="Reports" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" fx:id="btnSystemUser" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnSystemUserOnAction" prefHeight="30.0" prefWidth="163.0" styleClass="system-user-btn" text="System User" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane maxHeight="-Infinity" prefHeight="100000.0" prefWidth="1.0" VBox.vgrow="ALWAYS" />
+            <Button id="main-btns" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" prefHeight="30.0" prefWidth="163.0" styleClass="settings-btn" text="Settings" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-settings-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="main-btns" alignment="BASELINE_LEFT" graphicTextGap="8.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="30.0" prefWidth="163.0" styleClass="logout-btn" text="Log Out" textFill="#404041">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/7030313_sign%20out_ui%20basic_logout_app_user%20interface_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="30.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="720.0" prefWidth="991.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, ">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lblHelloName" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Text>
+                  <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Text fx:id="lblDate" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="txtTime" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <AnchorPane onMouseClicked="#btnOnMouseClickedNotification" visible="false">
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icons/bell-notfilled.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <Circle fill="#ff1f1ff5" layoutX="19.0" layoutY="8.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </Circle>
+                                    <Text fx:id="txtNumberOfNotification" fill="WHITE" layoutX="16.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </Text>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <ImageView fx:id="lblProfileImage" fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icons/icons8-glyph-100.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT">
+                           <children>
+                              <Text fx:id="lblName" strokeType="OUTSIDE" strokeWidth="0.0" text="User name">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="lblEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="moha.dev@gmail.com" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+         </top>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+         <center>
+            <BorderPane fx:id="context" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <right>
+                  <VBox fx:id="vBoxLeftSide" prefHeight="385.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;">
+                           <children>
+                              <TabPane prefHeight="270.0" prefWidth="230.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab fx:id="btnLowerQuantity" text="Lower Quantity">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="241.0" prefWidth="230.0">
+                                             <children>
+                                                <Label fx:id="lblProductQuantity" layoutX="14.0" layoutY="14.0" text="Product qty">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab fx:id="btnExpireSoon" text="Exparing Soon">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label fx:id="lblProductExpire" layoutX="14.0" layoutY="14.0" text="Comming Soon" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </TabPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="325.0" prefWidth="1000.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <AnchorPane VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="30.0" text="Comming Soon">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </VBox>
+               </right>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 16;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="30.0" />
+                     </BorderPane.margin>
+                     <top>
+                        <HBox alignment="CENTER" prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefWidth="1000.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;">
+                                 <children>
+                                    <VBox prefHeight="201.0" prefWidth="160.0">
+                                       <children>
+                                          <Pane prefHeight="12.0" prefWidth="85.0" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Patients">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="txtNumberOfPatients" strokeType="OUTSIDE" strokeWidth="0.0" text="250">
+                                             <font>
+                                                <Font name="System Bold" size="32.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="1000.0" HBox.hgrow="ALWAYS" />
+                                    <ImageView fitHeight="103.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icons/face-mask-man-icon.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefWidth="1000.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;">
+                                 <children>
+                                    <VBox prefHeight="201.0" prefWidth="160.0">
+                                       <children>
+                                          <Pane prefHeight="12.0" prefWidth="85.0" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text fx:id="txtNumberOfAppointments" strokeType="OUTSIDE" strokeWidth="0.0" text="250">
+                                             <font>
+                                                <Font name="System Bold" size="32.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="1000.0" HBox.hgrow="ALWAYS" />
+                                    <ImageView fitHeight="103.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icons/icons8-calendar-100.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <BorderPane prefHeight="345.0" prefWidth="525.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 16;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" />
+                                    <Label prefHeight="50.0" prefWidth="246.0" text="Total several Incomes">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="50.0" prefWidth="186.0" />
+                                 </children></HBox>
+                           </top>
+                           <BorderPane.margin>
+                              <Insets top="30.0" />
+                           </BorderPane.margin>
+                           <center>
+                              <BarChart fx:id="barChart" prefWidth="590.0" BorderPane.alignment="CENTER">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </center>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </center>
+               <BorderPane.margin>
+                  <Insets top="30.0" />
+               </BorderPane.margin>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

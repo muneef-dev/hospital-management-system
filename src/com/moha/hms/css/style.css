@@ -1,0 +1,48 @@
+#loginBtn, #managementAllBtn{
+    -fx-background-color: #A5A5A5;
+    -fx-text-fill: #595959;
+}
+
+#loginBtn:hover, #managementAllBtn:hover{
+    -fx-background-color: #595959;
+    -fx-text-fill: #F2F2F2;
+}
+
+.dashboard-search-bar{
+    -fx-background-color: #A5A5A5;
+    -fx-prompt-text-fill:  #595959;
+}
+
+.dashboard-search-bar:hover{
+    -fx-background-color: #595959;
+    -fx-text-fill:  #F2F2F2;
+    -fx-prompt-text-fill:  #F2F2F2;
+}
+
+#main-btns{
+    -fx-background-color: #CCCCCC;
+    -fx-text-fill: #595959;
+}
+
+#main-btns:hover{
+    -fx-background-color: #595959;
+    -fx-text-fill: #F2F2F2;
+}
+
+#dashboard-btn{
+    -fx-background-top-right-radius: 100;
+}
+
+.right-main-btns, #loginBtn{
+    -fx-background-radius: 16;
+}
+
+#backBtn, #addBtn, #viewBtn, #saveBtn, #clearBtn{
+    -fx-background-color: #A5A5A5;
+    -fx-text-fill: #595959;
+}
+
+#backBtn:hover, #addBtn:hover, #viewBtn:hover, #saveBtn:hover, #clearBtn:hover{
+    -fx-background-color: #595959;
+    -fx-text-fill: #F2F2F2;
+}
